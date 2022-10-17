@@ -1,0 +1,158 @@
+/* start main rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+:root{
+    --body-color:#f3eae3;
+    --head-color:#192229;
+    --text-color:#767789;
+    --submit-color:#3d8168;
+    --bg-color:#ffffff;
+}
+/* end main rules */
+
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--body-color);
+    display: grid;
+    place-content: center;
+    gap: 50px;
+}
+
+.container{
+    width: 600px;
+    height: 450px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.container picture{
+    width: 50%;
+    height: 100%;
+}
+.container picture img{
+    width: 100%;
+}
+.card{
+    width: 50%;
+    height: 100%;
+    background-color: var(--bg-color);
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.card h4{
+    font-size: 10px;
+    font-family: "Montserrat",sans-serif;
+    letter-spacing: 5px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: var(--text-color);
+
+
+}
+.card h1{
+    font-size: 28px;
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: capitalize;
+    margin:10px 40px 10px 0;
+    color: var(--head-color);
+}
+.card p{
+    font-family: "Montserrat",sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin: 10px 10px 10px 0;
+
+}
+.card div{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 10px 10px 10px 0;
+}
+.card .price{
+    font-size: 30px;
+    font-family: "Fraunces",sans-serif ;
+    font-weight:700;
+    color: var(--submit-color);
+    margin-right: 15px;
+}
+.card .oldPrice{
+    font-family: "Montserrat",sans-serif;
+}
+.card div del,
+.card .oldPrice{
+    font-size: 13px;
+    color: var(--text-color);
+}
+.card button {
+    font-size: 13px;
+    font-family: "Montserrat",sans-serif;
+    font-weight: 600;
+    width: 90%;
+    height: 40px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    color: var(--bg-color);
+    background-color: var(--submit-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+    transition: 0.3s;
+}
+.card button:hover{
+    background-color: hsl(212, 21%, 14%)
+}
+
+@media only screen and (max-width:650px){
+    .container{
+        width: 343px;
+        height: 600px;
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+    .card{
+        width: 100%;
+        height: 70%;
+        overflow: hidden;
+        padding: 10px 33px;
+    }
+    .container picture{
+        width: 100%;
+        height: 40%;
+        background-image: url(images/image-product-mobile.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .container img{
+        display: none;
+    }
+}
+
+footer{
+    display: block;
+    font-size: 12px;
+    font-family: "Montserrat",sans-serif;
+    text-align: center;
+}
